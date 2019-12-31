@@ -9,18 +9,10 @@ data class Film (
     var judul: String?,
     var desc:String?,
     var releaseDate: String?,
-    var rating:String?,
-    var direktur1:String?,
-    var direktur2: String?,
-    var screenplay1: String?,
-    var screenplay2: String?
+    var rating:String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -34,10 +26,7 @@ data class Film (
         parcel.writeString(desc)
         parcel.writeString(releaseDate)
         parcel.writeString(rating)
-        parcel.writeString(direktur1)
-        parcel.writeString(direktur2)
-        parcel.writeString(screenplay1)
-        parcel.writeString(screenplay2)
+
     }
 
     override fun describeContents(): Int {

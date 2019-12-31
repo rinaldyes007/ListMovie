@@ -16,6 +16,14 @@ import com.example.listmovie.model.Film
 import kotlinx.android.synthetic.main.item_film.view.*
 
 class FilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adapter<FilmAdapter.ListViewHolder>() {
+
+    private var onItemClickCallBack: OnItemClickCallBack? = null
+
+    fun setOnItemClickCallBack(onItemClickCallBack: OnItemClickCallBack) {
+        this.onItemClickCallBack = onItemClickCallBack
+    }
+
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_film, viewGroup, false)
         return ListViewHolder(view)
@@ -37,9 +45,16 @@ class FilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adapter<
 
                 tv_judul.text = film.judul
                 tv_desc.text = film.desc
+                tv_rating.text = film.rating
+
+                itemView.setOnClickListener{onItemClickCallBack?.onItemClicked(film)}
             }
         }
 
+    }
+
+    interface OnItemClickCallBack {
+        fun onItemClicked(data: Film)
     }
 
 }

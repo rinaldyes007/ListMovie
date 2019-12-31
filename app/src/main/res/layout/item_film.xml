@@ -1,29 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
+    android:background="#2c3d63"
+    android:layout_marginBottom="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/img_film"
-        android:scaleType="fitXY"
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="15dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/cv2"
         android:layout_width="100dp"
-        android:layout_height="150dp"/>
+        android:layout_height="150dp">
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="15dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/cv"
+        android:layout_width="100dp"
+        android:layout_height="150dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_film"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/poster_preman" />
+
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@drawable/listgrad"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="7.1"
+                android:layout_width="45dp"
+                android:layout_height="40dp"/>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
-
+        android:textColor="#ffffff"
+        android:fontFamily="Roboto"
+        android:text="Judul"
         android:textStyle="bold"
-        android:layout_toEndOf="@id/img_film"
+        android:layout_toEndOf="@id/cv"
         android:layout_marginStart="26dp"
         android:id="@+id/tv_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        android:textColor="#ffffff"
+        android:fontFamily="Proxima Sans"
+        android:text="@string/lorem"
         android:maxLines="3"
         android:ellipsize="end"
-        android:layout_toRightOf="@+id/img_film"
+        android:layout_toRightOf="@+id/cv"
         android:layout_marginTop="10dp"
         android:layout_marginStart="26dp"
         android:layout_below="@id/tv_judul"

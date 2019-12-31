@@ -4,240 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF2F2"
+    android:background="#2c3d63"
     tools:context=".DetailFilm">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/poster_film"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bggrad"
+        android:fitsSystemWindows="true"
+        android:src="@drawable/poster_bohemian"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/cardView"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.299">
 
-            android:id="@+id/cd"
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
+            <TextView
+                android:id="@+id/get_rating"
+                android:layout_marginLeft="25dp"
+                android:drawableTop="@drawable/ic_star_half_black_24dp"
+                android:text="@string/rating"
+                style="@style/textView" />
 
-            <ImageView
-                android:id="@+id/poster_film"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/poster_venom" />
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/gardline" />
+
+            <TextView
+                android:layout_marginLeft="125dp"
+                style="@style/textView"
+                android:drawableTop="@drawable/ic_favorite_black_24dp"
+                android:text="@string/like"/>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
+                android:background="@drawable/gardline" />
+
+            <TextView
+                style="@style/textView"
+                android:layout_marginLeft="225dp"
+                android:drawableTop="@drawable/ic_people_black_24dp"
+                android:text="@string/visitor" />
 
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/tb"
+        <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        style="@style/cardView2"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.037">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cd"
-            android:background="#ffffff"
-            android:elevation="2dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:id="@+id/get_judul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Avengers Infinity War 2018"
-                    android:textColor="#00ba56"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/get_rating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="83%"
-                    android:textColor="#00ba56"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/get_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="August 14, 2018"
-                    android:textColor="#00ba56"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <LinearLayout
-            android:id="@+id/ln1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tb">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00ba56"
-                android:paddingLeft="20dp"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:text="Overview                :"
-                android:textColor="#ffffff"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/get_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ln1"
-            android:background="#ffffff"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="10dp"
-            android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            android:textColor="#00ba56"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:id="@+id/ln2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/get_detail"
-            android:layout_marginBottom="10dp"
-            android:background="#ffffff"
-            android:orientation="vertical">
+                android:id="@+id/get_judul"
+                style="@style/atribut"
+                android:text="@string/juduls"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="#00ba56"
-                android:paddingLeft="20dp"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:text="Feautred Crew      :"
-                android:textColor="#ffffff"
-                android:textStyle="bold" />
+                android:id="@+id/get_date"
+                style="@style/tanggal"
+                android:text="@string/tanggal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/get_judul"
+                app:layout_constraintVertical_bias="0.0" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal">
+            <TextView
+                style="@style/genre"
+                android:text="@string/genre"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/get_date"
+                app:layout_constraintVertical_bias="1.0" />
 
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Director 1                      : "
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/get_direct1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Rinaldy Eka Saputa"
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        style="@style/cardView3"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Director 2                       : "
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/get_direct2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Rinaldy Eka Saputa"
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/iff"
+                android:textStyle="bold"
+                style="@style/info"
+                android:layout_marginTop="8dp"
+                android:text="@string/info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="ScreenPlay 1                 : "
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/get_screen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Rinaldy Eka Saputa"
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+            <TextView
+                android:id="@+id/get_detail"
+                style="@style/info"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="90dp"
+                android:paddingEnd="30dp"
                 android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="ScreenPlay 2                 : "
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/get_screen2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Rinaldy Eka Saputa"
-                    android:textColor="#00ba56"
-                    android:textStyle="bold" />
+                android:text="@string/deskripsi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
 
-            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
-
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
