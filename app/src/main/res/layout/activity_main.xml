@@ -10,11 +10,11 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        app:tabTextColor="#2c3d63"
-        android:background="#fdf6f0"
+        app:tabTextColor="#ffffff"
+        android:background="@color/colorPrimary"
         android:paddingTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="90dp"/>
+        android:layout_height="wrap_content"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"

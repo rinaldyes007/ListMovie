@@ -4,6 +4,9 @@ import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,18 +18,8 @@ import kotlinx.android.synthetic.main.fragment_movie.*
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var dataJudul: Array<String>
-//    private lateinit var dataDesc: Array<String>
-//    private lateinit var dataPhoto: TypedArray
-//    private lateinit var dataRatingFilm: Array<String>
-//    private lateinit var dataDirector1: Array<String>
-//    private lateinit var dataDirector2: Array<String>
-//    private lateinit var dataScreenPlay1: Array<String>
-//    private lateinit var dataScreenPlay2: Array<String>
-//    private lateinit var dataRilis: Array<String>
-//    private var films = arrayListOf<Film>()
 
-    private val list = ArrayList<Film>()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,49 +33,22 @@ class MainActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewpager)
         supportActionBar?.elevation = 0f
 
-//        tv_list.setHasFixedSize(true)
-//        list.addAll(getlistFilm())
-//        showRecyclerList()
 
     }
 
-//    fun getlistFilm(): ArrayList<Film> {
-//      val  dataJudul = resources.getStringArray(R.array.filmData)
-//        val dataDesc = resources.getStringArray(R.array.descData)
-//        val dataPhoto = resources.obtainTypedArray(R.array.fotoData)
-//        val  dataRilis = resources.getStringArray(R.array.tanggal_rilis)
-//        val   dataRatingFilm = resources.getStringArray(R.array.ratingFilm)
-//        val   dataDirector1 = resources.getStringArray(R.array.director1)
-//        val    dataDirector2 = resources.getStringArray(R.array.director2)
-//        val   dataScreenPlay1 = resources.getStringArray(R.array.screenPlay1)
-//        val  dataScreenPlay2 = resources.getStringArray(R.array.screenPlay2)
-//
-//        val listFilm = ArrayList<Film>()
-//
-//        for (position in dataJudul.indices) {
-//            val film = Film(
-//                dataPhoto.getResourceId(position, 0),
-//                dataJudul[position],
-//                dataDesc[position],
-//                dataRilis[position],
-//                dataRatingFilm[position],
-//                dataDirector1[position],
-//                dataDirector2[position],
-//                dataScreenPlay1[position],
-//                dataScreenPlay2[position]
-//
-//
-//            )
-//            listFilm.add(film)
-//        }
-//        return listFilm
-//    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
-//    private fun showRecyclerList() {
-//        tv_list.layoutManager = LinearLayoutManager(this)
-//        val filmAdapter = FilmAdapter(list)
-//        tv_list.adapter = filmAdapter
-//    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.action_change_settings) {
+            val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(mIntent)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 
 }

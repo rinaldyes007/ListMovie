@@ -3,6 +3,7 @@
     <string name="lorem">lorem ipsum dolor sit amet</string>
     <string name="tab1">Movies</string>
     <string name="tab2">Tv Show</string>
+    <string name="setting">Change Languange Setting</string>
 
     <string-array name="filmData">
         <item>Avenger: Infinity War</item>
