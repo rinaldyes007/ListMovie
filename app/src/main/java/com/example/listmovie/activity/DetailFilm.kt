@@ -1,16 +1,14 @@
-package com.example.listmovie
+package com.example.listmovie.activity
 
-import android.graphics.BlurMaskFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.listmovie.R
 import com.example.listmovie.model.Film
 
 
 class DetailFilm : AppCompatActivity() {
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,12 +16,11 @@ class DetailFilm : AppCompatActivity() {
         setContentView(R.layout.activity_detail_film)
 
 
-        val tvJudul : TextView = findViewById(R.id.get_judul)
-        val imgpic : ImageView = findViewById(R.id.poster_film)
-        val tvRating : TextView = findViewById(R.id.get_rating)
-        val tvRilis : TextView = findViewById(R.id.get_date)
-        val tvDetail : TextView = findViewById(R.id.get_detail)
-
+        val tvJudul: TextView = findViewById(R.id.get_judul)
+        val imgpic: ImageView = findViewById(R.id.poster_film)
+        val tvRating: TextView = findViewById(R.id.get_rating)
+        val tvRilis: TextView = findViewById(R.id.get_date)
+        val tvDetail: TextView = findViewById(R.id.get_detail)
 
 
         val film = intent.getParcelableExtra(EXTRA_FILM) as Film
@@ -41,10 +38,8 @@ class DetailFilm : AppCompatActivity() {
         imgpic.setImageResource(poster)
 
 
-
     }
 //
-
 
 
     companion object {

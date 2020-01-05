@@ -1,20 +1,17 @@
-package com.example.listmovie
+package com.example.listmovie.adapter
 
 import android.content.Context
-import android.os.Parcel
-import android.os.Parcelable
 import androidx.annotation.Nullable
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.fragment.app.FragmentTransaction
-import androidx.lifecycle.Lifecycle
-import com.google.android.material.appbar.AppBarLayout
+import com.example.listmovie.fragment.MovieFragment
+import com.example.listmovie.R
+import com.example.listmovie.fragment.TvShowFragment
 
-class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
-
+class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm) {
 
 
     override fun getItem(position: Int): Fragment {
@@ -27,7 +24,10 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     }
 
     @StringRes
-    private val TAB_TITLES = intArrayOf(R.string.tab1, R.string.tab2)
+    private val TAB_TITLES = intArrayOf(
+        R.string.tab1,
+        R.string.tab2
+    )
 
     @Nullable
     override fun getPageTitle(position: Int): CharSequence? {
@@ -37,9 +37,6 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     override fun getCount(): Int {
         return 2
     }
-
-
-
 
 
 }

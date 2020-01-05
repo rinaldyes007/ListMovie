@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#2c3d63"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MovieFragment">
+    tools:context=".fragment.MovieFragment">
 
 
 

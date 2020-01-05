@@ -19,69 +19,69 @@
     </string-array>
 
     <string-array name="tvShowData">
-        <item>Bird Box</item>
-        <item>Bohemian Rhapsody</item>
-        <item>Bumblebee</item>
-        <item>Creed II</item>
-        <item>How to Train Your Dragon: The Hidden World</item>
-        <item>Dragonball Z: Broly</item>
-        <item>Glass</item>
-        <item>Hunter Killer</item>
-        <item>Mary Poppins Returns</item>
-        <item>Preman Pensiun</item>
+        <item>Legacies</item>
+        <item>YOU</item>
+        <item>Alexa and Kate</item>
+        <item>Black Lightning</item>
+        <item>Lost In Space</item>
+        <item>Titans</item>
+        <item>Killing Eve</item>
+        <item>Altered Carbon</item>
+        <item>Manifest</item>
+        <item>The Resident</item>
     </string-array>
 
     <integer-array name="tvShowFoto">
-        <item>@drawable/poster_birdbox</item>
-        <item>@drawable/poster_bohemian</item>
-        <item>@drawable/poster_bumblebee</item>
-        <item>@drawable/poster_creed</item>
-        <item>@drawable/poster_dragon</item>
-        <item>@drawable/poster_dragonball</item>
-        <item>@drawable/poster_glass</item>
-        <item>@drawable/poster_hunterkiller</item>
-        <item>@drawable/poster_marrypopins</item>
-        <item>@drawable/poster_preman</item>
+        <item>@drawable/poster_legacies</item>
+        <item>@drawable/poster_you</item>
+        <item>@drawable/poster_alexa</item>
+        <item>@drawable/poster_lightning</item>
+        <item>@drawable/poster_lost</item>
+        <item>@drawable/poster_titans</item>
+        <item>@drawable/poster_killing</item>
+        <item>@drawable/poster_carbon</item>
+        <item>@drawable/poster_manifest</item>
+        <item>@drawable/poster_resident</item>
     </integer-array>
 
     <string-array name="tvShowDesc">
-        <item>Five years after an ominous unseen presence drives most of society to suicide, a survivor and her two children make a desperate bid to reach safety.</item>
-        <item>Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock n roll band Queen in 1970. Hit songs become instant classics. When Mercurys increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess.</item>
-        <item>On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken. When Charlie revives him, she quickly learns this is no ordinary yellow VW bug.</item>
-        <item>Between personal obligations and training for his next big fight against an opponent with ties to his familys past, Adonis Creed is up against the challenge of his life.</item>
-        <item>As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.</item>
-        <item>As Goku investigates the destruction of the Southern Galaxy, Vegeta is taken to be King of the New Planet Vegeta, and to destroy the Legendary Super Saiyan, Broly.</item>
-        <item>In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.</item>
-        <item>Captain Glass of the USS Arkansas discovers that a coup détat is taking place in Russia, so he and his crew join an elite group working on the ground to prevent a war.</item>
-        <item>In Depression-era London, a now-grown Jane and Michael Banks, along with Michaels three children, are visited by the enigmatic Mary Poppins following a personal loss. Through her unique magical skills, and with the aid of her friend Jack, she helps the family rediscover the joy and wonder missing in their lives.</item>
-        <item>After three years, the business of Muslihat (Epi Kusnandar), who has retired as a thug, has a problem. Sales decline. Muslihat also faces new problems when Safira (Safira Maharani), her only daughter, grows up in adolescence and begins to be visited by boys. A bigger problem: frictions between his former subordinates.</item>
+        <item>In a place where young witches, vampires, and werewolves are nurtured to be their best selves in spite of their worst impulses, Klaus Mikaelsons daughter, 17-year-old Hope Mikaelson, Alaric Saltzman’s twins, Lizzie and Josie Saltzman, among others, come of age into heroes and villains at The Salvatore School for the Young and Gifted.</item>
+        <item>When a brilliant bookstore manager crosses paths with an aspiring writer, he uses the internet and social media to gather the most intimate of details and get close to her. A charming and awkward crush quickly becomes obsession as he quietly and strategically removes every obstacle - and person - in his way.</item>
+        <item>Lifelong best friends Alexa and Katie are eagerly anticipating the start of their freshman year of high school. The pals confront a crisis that leaves them feeling like outsiders at a time when what seems to matter most is fitting in.</item>
+        <item>Jefferson Pierce is a man wrestling with a secret. As the father of two daughters and principal of a charter high school that also serves as a safe haven for young people in a New Orleans neighborhood overrun by gang violence, he is a hero to his community.</item>
+        <item>After crash-landing on an alien planet, the Robinson family fights against all odds to survive and escape. But theyre surrounded by hidden dangers.</item>
+        <item>A team of young superheroes led by Nightwing (formerly Batmans first Robin) form to combat evil and other perils.</item>
+        <item>A security consultant hunts for a ruthless assassin. Equally obsessed with each other, they go head to head in an epic game of cat-and-mouse.</item>
+        <item>After 250 years on ice, a prisoner returns to life in a new body with one chance to win his freedom: by solving a mind-bending murder.</item>
+        <item>After landing from a turbulent but routine flight, the crew and passengers of Montego Air Flight 828 discover five years have passed in what seemed like a few hours. As their new realities become clear, a deeper mystery unfolds and some of the returned passengers soon realize they may be meant for something greater than they ever thought possible.</item>
+        <item>A tough, brilliant senior resident guides an idealistic young doctor through his first day, pulling back the curtain on what really happens, both good and bad, in modern-day medicine.</item>
     </string-array>
 
     <string-array name="ratingTvShow">
-        <item>69%</item>
-        <item>80%</item>
-        <item>65%</item>
-        <item>68%</item>
-        <item>77%</item>
-        <item>72%</item>
-        <item>65%</item>
+        <item>79%</item>
+        <item>78%</item>
+        <item>71%</item>
         <item>64%</item>
-        <item>66%</item>
-        <item>65%</item>
+        <item>71%</item>
+        <item>77%</item>
+        <item>81%</item>
+        <item>79%</item>
+        <item>74%</item>
+        <item>78%</item>
 
     </string-array>
 
     <string-array name="rilisTvShow">
-        <item>12 November 2018</item>
-        <item>24 October 2018</item>
-        <item>15 December 2018</item>
-        <item>21 November 2018</item>
-        <item>03 January 2019</item>
-        <item>16 March 1993</item>
-        <item>16 January 2019</item>
-        <item>19 October 2018</item>
-        <item>13 December 2018</item>
-        <item>17 January 2019</item>
+        <item>October 25, 2018</item>
+        <item>September 9, 2018</item>
+        <item>March 23, 2018</item>
+        <item>January 16, 2018</item>
+        <item>April 13, 2018</item>
+        <item>January 16, 1993</item>
+        <item>April 18, 2018</item>
+        <item>February 2, 2018</item>
+        <item>September 24, 2018</item>
+        <item>January 21, 2018</item>
     </string-array>
 
     <string-array name="descData">
@@ -148,7 +148,6 @@
     <string name="visitor">452</string>
     <string name="juduls">Bohemian Rhapsody</string>
     <string name="tanggal">12 - 09 - 2018</string>
-    <string name="genre">Genre</string>
     <string name="info">Information Film</string>
     <string name="deskripsi">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
 

@@ -1,25 +1,16 @@
-package com.example.listmovie
+package com.example.listmovie.activity
 
 import android.content.Intent
-import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.*
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.listmovie.DetailFilm.Companion.EXTRA_FILM
-import com.example.listmovie.adapter.FilmAdapter
-import com.example.listmovie.model.Film
+import com.example.listmovie.R
+import com.example.listmovie.adapter.SectionsPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_movie.*
 
 class MainActivity : AppCompatActivity() {
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
+        val sectionsPagerAdapter =
+            SectionsPagerAdapter(this, supportFragmentManager)
         viewpager.adapter = sectionsPagerAdapter
         tabs.setupWithViewPager(viewpager)
         supportActionBar?.elevation = 0f
@@ -50,37 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //        val listView:ListView = findViewById(R.id.tv_list)
