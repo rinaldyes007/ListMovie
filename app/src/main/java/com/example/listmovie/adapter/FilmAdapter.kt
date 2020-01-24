@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.listmovie.BuildConfig.IMAGES_PATH_API
 import com.example.listmovie.R
 import com.example.listmovie.model.Film
 import kotlinx.android.synthetic.main.item_film.view.*
 
-class FilmAdapter(private val listFilm: ArrayList<Film>) :
+class FilmAdapter(private val listFilm: MutableList<Film>) :
     RecyclerView.Adapter<FilmAdapter.ListViewHolder>() {
 
     private var onItemClickCallBack: OnItemClickCallBack? = null
@@ -37,13 +38,12 @@ class FilmAdapter(private val listFilm: ArrayList<Film>) :
         fun bind(film: Film) {
             with(itemView) {
                 Glide.with(itemView.context)
-                    .load(film.photo)
-                    .apply(RequestOptions().override(100, 150))
+                    .load(IMAGES_PATH_API+film.poster)
+                    .apply(RequestOptions())
                     .into(img_film)
 
-                tv_judul.text = film.judul
-                tv_desc.text = film.desc
-                tv_rating.text = film.rating
+                tv_judul.text = film.title
+                tv_desc.text = film.overview
 
                 itemView.setOnClickListener { onItemClickCallBack?.onItemClicked(film) }
             }

@@ -1,7 +1,6 @@
 package com.example.listmovie.fragment
 
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,9 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.listmovie.activity.DetailFilm
 import com.example.listmovie.R
-import com.example.listmovie.Retrofit.Common
+import com.example.listmovie.Retrofit.RetrofitClient
 import com.example.listmovie.`interface`.RetrofitInterface
 import com.example.listmovie.adapter.FilmAdapter
 import com.example.listmovie.model.Film
@@ -38,12 +36,13 @@ class MovieFragment : Fragment() {
     ): View? {
 
 
-        mInterface = Common.retrofitInterface
+        mInterface = RetrofitClient.instance
         param = inflater.inflate(R.layout.fragment_movie, container, false)
         tvList = param.findViewById(R.id.tv_list)
         tvList.layoutManager = LinearLayoutManager(activity)
         tvList.setHasFixedSize(true)
         getlistFilm()
+
 //        showRecyclerList()
 
         return param
