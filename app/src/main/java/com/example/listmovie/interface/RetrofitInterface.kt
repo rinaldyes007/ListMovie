@@ -2,10 +2,7 @@ package com.example.listmovie.`interface`
 
 
 import com.example.listmovie.BuildConfig.TMDS_API_KEY
-import com.example.listmovie.model.Film
 import com.example.listmovie.model.FilmResponse
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -20,5 +17,4 @@ interface RetrofitInterface {
 
 
 }
-
 

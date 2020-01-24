@@ -1,3 +1,6 @@
 package com.example.listmovie.model
 
-data class FilmResponse(val error: Boolean, val film: Film)
+data class FilmResponse(val film: List<Film>? = null)
+
+
+

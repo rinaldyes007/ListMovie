@@ -14,6 +14,7 @@ import com.example.listmovie.Retrofit.RetrofitClient
 import com.example.listmovie.`interface`.RetrofitInterface
 import com.example.listmovie.adapter.FilmAdapter
 import com.example.listmovie.model.Film
+import com.example.listmovie.model.FilmResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -49,14 +50,14 @@ class MovieFragment : Fragment() {
     }
 
     fun getlistFilm(){
-        mInterface.getMovie().enqueue(object : Callback<MutableList<Film>>{
-            override fun onFailure(call: Call<MutableList<Film>>, t: Throwable) {
+        mInterface.getMovie().enqueue(object : Callback<MutableList<FilmResponse>>{
+            override fun onFailure(call: Call<MutableList<FilmResponse>>, t: Throwable) {
                 Toast.makeText(activity, "gagal", Toast.LENGTH_LONG).show()
             }
 
             override fun onResponse(
-                call: Call<MutableList<Film>>,
-                response: Response<MutableList<Film>>
+                call: Call<MutableList<FilmResponse>>,
+                response: Response<MutableList<FilmResponse>>
             ) {
                 adapter = FilmAdapter(response.body() as MutableList<Film>)
                 tvList.adapter = adapter
