@@ -18,6 +18,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "PATH_API_KEY", '"https://api.themoviedb.org/3/"')
+        buildConfigField("String", "TMDS_API_KEY", '"80c60f01faa9b8b2f0133b08faf9efb8"')
+        buildConfigField("String", "IMAGES_PATH_API", '"https://image.tmdb.org/t/p/w780"')
+        buildConfigField("String", "IMAGES_PATH_API_500", '"https://image.tmdb.org/t/p/w500"')
     }
     buildTypes {
         release {
@@ -39,6 +43,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2,5,0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
