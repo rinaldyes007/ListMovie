@@ -1,11 +1,6 @@
 package com.example.listmovie.activity
 
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import com.example.listmovie.R
-import com.example.listmovie.model.Film
 
 
 class DetailFilm : AppCompatActivity() {

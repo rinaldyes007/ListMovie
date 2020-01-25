@@ -13,8 +13,8 @@ import com.example.listmovie.R
 import com.example.listmovie.Retrofit.RetrofitClient
 import com.example.listmovie.`interface`.RetrofitInterface
 import com.example.listmovie.adapter.FilmAdapter
-import com.example.listmovie.model.Film
-import com.example.listmovie.model.FilmResponse
+import com.example.listmovie.model.Movie
+import com.example.listmovie.model.MovieResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,7 +28,7 @@ class MovieFragment : Fragment() {
     lateinit var adapter: FilmAdapter
     lateinit var mInterface: RetrofitInterface
     private lateinit var tvList: RecyclerView
-    private val list = ArrayList<Film>()
+    private val list = ArrayList<Movie>()
     internal lateinit var param: View
 
     override fun onCreateView(
@@ -49,17 +49,19 @@ class MovieFragment : Fragment() {
         return param
     }
 
+
+
     fun getlistFilm(){
-        mInterface.getMovie().enqueue(object : Callback<MutableList<FilmResponse>>{
-            override fun onFailure(call: Call<MutableList<FilmResponse>>, t: Throwable) {
+        mInterface.getMovie().enqueue(object : Callback<MovieResponse>{
+            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
                 Toast.makeText(activity, "gagal", Toast.LENGTH_LONG).show()
             }
 
             override fun onResponse(
-                call: Call<MutableList<FilmResponse>>,
-                response: Response<MutableList<FilmResponse>>
+                call: Call<MovieResponse>,
+                response: Response<MovieResponse>
             ) {
-                adapter = FilmAdapter(response.body() as MutableList<Film>)
+                adapter = FilmAdapter(response.body()?.results as ArrayList<Movie>)
                 tvList.adapter = adapter
             }
 
